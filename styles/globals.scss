@@ -1,4 +1,47 @@
 @use './vars';
+@use './utilities';
 
 @import 'normalize/normalize';
 @include normalize();
+@import './animations';
+
+body {
+    font-family: 'Oswald', sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h4, h5, h6 {
+    font-weight: 600;
+}
+
+.container {
+    max-width: vars.$max-width;
+    margin: 0 auto;
+    padding: 0 1rem;
+    overflow-x: visible;
+}
+
+// Hero
+.hero {
+    @include utilities.flex-center;
+    overflow: hidden;
+    min-height: 100dvh;
+}
+
+.hero-greetings {
+    font-size: 1.5rem;
+    opacity: 0;
+}
+
+.hero-title {
+    margin: 0;
+    opacity: 0;
+    margin-left:1.5rem;
+    font-size: 4rem;
+    letter-spacing: -0.15rem;
+}
