@@ -659,6 +659,13 @@ template {
   animation-timing-function: cubic-bezier(1, 0, 0.75, 0.95);
 }
 
+.backdrop-blur {
+  animation-name: backdrop-blur;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(1, 0, 0.75, 0.95);
+}
+
 .slide-fade-in-right {
   animation-name: slide-fade-in-right;
   animation-fill-mode: forwards;
@@ -679,6 +686,16 @@ template {
   }
   to {
     filter: brightness(50%) blur(5px);
+  }
+}
+@keyframes backdrop-blur {
+  from {
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+  }
+  to {
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
   }
 }
 @keyframes slide-fade-in-right {
@@ -766,6 +783,7 @@ body {
   color: var(--sl-color-text-main);
   background-color: var(--sl-color-background-main);
   font-size: calc(15px + 0.390625vw);
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -778,6 +796,50 @@ body {
 .section-title {
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--sl-color-border-1);
+  color: var(--sl-color-primary-400);
+}
+
+header {
+  position: relative;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  box-sizing: border-box;
+  position: fixed;
+  width: 100dvw;
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+  -webkit-backdrop-filter: blur(0);
+          backdrop-filter: blur(0);
+}
+header nav {
+  display: flex;
+  gap: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  header nav {
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+}
+header a {
+  text-decoration: none;
+  color: var(--sl-color-text-main);
+  transition: color 150ms ease-in-out;
+  font-weight: 500;
+}
+header a:hover {
+  color: var(--sl-color-accent-200);
+}
+header span {
+  color: var(--sl-color-primary-500);
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .hero {
