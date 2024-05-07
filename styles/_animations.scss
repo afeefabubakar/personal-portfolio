@@ -5,13 +5,6 @@
     animation-timing-function: cubic-bezier(1,0,.75,.95);
 }
 
-.backdrop-blur {
-    animation-name: backdrop-blur;
-    animation-fill-mode:forwards;
-    animation-duration: 1s;
-    animation-timing-function: cubic-bezier(1,0,.75,.95);
-}
-
 .slide-fade-in-right {
     animation-name: slide-fade-in-right;
     animation-fill-mode: forwards;
@@ -33,15 +26,6 @@
     to {
         filter: brightness(50%) blur(5px);
     } 
-}
-
-@keyframes backdrop-blur {
-    from {
-        backdrop-filter: blur(0);
-    } 
-    to {
-        backdrop-filter: blur(5px);
-    }
 }
 
 @keyframes slide-fade-in-right {
