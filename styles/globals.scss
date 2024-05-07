@@ -7,6 +7,10 @@
 @import './theme';
 @import './typography';
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--sl-color-text-main);
     background-color: var(--sl-color-background-main);
@@ -14,11 +18,27 @@ body {
     scroll-behavior: smooth;
 }
 
+:target::before {
+    content: '';
+    display: block;
+    height: 85px;
+    margin: -85px 0 0;
+}
+
 .container {
     @include normalize-rhythm(padding, 0 16px);
     max-width: vars.$container-max-width;
     margin: 0 auto;
     overflow-x: visible;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
 }
 
 .section-title {
@@ -30,16 +50,32 @@ body {
 // Header
 header {
     position: relative;
+<<<<<<< Updated upstream
+=======
+    max-height: 85px;
+
+>>>>>>> Stashed changes
     .container {
         @include utilities.flex-row-between;
         @include utilities.padding-y(1.5rem);
         box-sizing: border-box;
+<<<<<<< Updated upstream
         position: fixed;
+=======
+        position: absolute;
+>>>>>>> Stashed changes
         width: 100dvw;
         left: 50%;
         z-index: 10;
         transform: translateX(-50%);
         backdrop-filter: blur(0);
+<<<<<<< Updated upstream
+=======
+
+        @media screen and (min-width: vars.$breakpoint-md) {
+            @include utilities.padding-x(2rem);
+        }
+>>>>>>> Stashed changes
     }
     nav {
         display: flex;
@@ -47,7 +83,10 @@ header {
 
         @media screen and (min-width: vars.$breakpoint-md) {
             gap: 2rem;
+<<<<<<< Updated upstream
             padding: 0 2rem;
+=======
+>>>>>>> Stashed changes
         }
     }
     a {
@@ -59,11 +98,42 @@ header {
     a:hover {
         color: var(--sl-color-accent-200);
     }
+<<<<<<< Updated upstream
+=======
+    a:active {
+        color: var(--sl-color-accent-300);
+    }
+>>>>>>> Stashed changes
     span {
         color: var(--sl-color-primary-500);
         font-size: 2rem;
         font-weight: 600;
     }
+<<<<<<< Updated upstream
+=======
+}
+
+.back-to-top {
+    position: fixed;
+    z-index: 10;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.back-to-top::part(base) {
+    border: 2px solid var(--sl-color-border-1);
+    display: hidden;
+}
+
+.back-to-top::part(base):hover {
+    background-color: var(--sl-color-primary-950);
+}
+
+.back-to-top::part(label) {
+    color: var(--sl-color-primary-400);
+    font-size: 1.25rem;
+    font-weight: 600;
+>>>>>>> Stashed changes
 }
 
 // Hero
@@ -99,6 +169,6 @@ header {
     margin: 0;
     @include normalize-rhythm(margin-left, 24px);
     opacity: 0;
-    color: var(--sl-color-primary-200);
+    color: var(--sl-color-primary-300);
 }
 
