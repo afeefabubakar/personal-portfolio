@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-var header = document.querySelector('header .container');
-if (header) {
-    header.classList.add('backdrop-blur');
-}
-=======
 var header = document.querySelector('header');
 var backToTopButton = document.querySelector('sl-button.back-to-top');
 var backToTopRoot = customElements
@@ -24,7 +18,6 @@ backToTopRoot.then(function (root) {
     });
     headerObserver.observe(header);
 });
->>>>>>> Stashed changes
 var heroTitle = document.querySelector('.hero-title');
 var heroGreeting = document.querySelector('.hero-greetings');
 var heroBg = document.querySelector('.hero-bg');

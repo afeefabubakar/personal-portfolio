@@ -50,32 +50,22 @@ body {
 // Header
 header {
     position: relative;
-<<<<<<< Updated upstream
-=======
     max-height: 85px;
 
->>>>>>> Stashed changes
     .container {
         @include utilities.flex-row-between;
         @include utilities.padding-y(1.5rem);
         box-sizing: border-box;
-<<<<<<< Updated upstream
-        position: fixed;
-=======
         position: absolute;
->>>>>>> Stashed changes
         width: 100dvw;
         left: 50%;
         z-index: 10;
         transform: translateX(-50%);
         backdrop-filter: blur(0);
-<<<<<<< Updated upstream
-=======
 
         @media screen and (min-width: vars.$breakpoint-md) {
             @include utilities.padding-x(2rem);
         }
->>>>>>> Stashed changes
     }
     nav {
         display: flex;
@@ -83,10 +73,6 @@ header {
 
         @media screen and (min-width: vars.$breakpoint-md) {
             gap: 2rem;
-<<<<<<< Updated upstream
-            padding: 0 2rem;
-=======
->>>>>>> Stashed changes
         }
     }
     a {
@@ -98,19 +84,14 @@ header {
     a:hover {
         color: var(--sl-color-accent-200);
     }
-<<<<<<< Updated upstream
-=======
     a:active {
         color: var(--sl-color-accent-300);
     }
->>>>>>> Stashed changes
     span {
         color: var(--sl-color-primary-500);
         font-size: 2rem;
         font-weight: 600;
     }
-<<<<<<< Updated upstream
-=======
 }
 
 .back-to-top {
@@ -133,7 +114,6 @@ header {
     color: var(--sl-color-primary-400);
     font-size: 1.25rem;
     font-weight: 600;
->>>>>>> Stashed changes
 }
 
 // Hero
