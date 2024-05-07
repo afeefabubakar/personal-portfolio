@@ -1,3 +1,10 @@
+.dim {
+    animation-name: dim;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(1,0,.75,.95);
+}
+
 .slide-fade-in-right {
     animation-name: slide-fade-in-right;
     animation-fill-mode: forwards;
@@ -10,6 +17,15 @@
     animation-fill-mode: forwards;
     animation-duration: 500ms;
     animation-timing-function: ease-in-out;
+}
+
+@keyframes dim {
+    from {
+        filter: brightness(100%) blur(0);
+    }  
+    to {
+        filter: brightness(50%) blur(5px);
+    } 
 }
 
 @keyframes slide-fade-in-right {
