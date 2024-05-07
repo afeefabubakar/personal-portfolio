@@ -1,4 +1,63 @@
 @use './vars';
+@use './utilities';
 
 @import 'normalize/normalize';
 @include normalize();
+@import './animations';
+@import './theme';
+@import './typography';
+
+body {
+    color: var(--sl-color-text-main);
+    background-color: var(--sl-color-background-main);
+    font-size: calc(15px + 0.390625vw);
+}
+
+.container {
+    @include normalize-rhythm(padding, 0 16px);
+    max-width: vars.$container-max-width;
+    margin: 0 auto;
+    overflow-x: visible;
+}
+
+.section-title {
+    @include normalize-rhythm(padding-bottom, 0.5rem);
+    border-bottom: 2px solid var(--sl-color-border-1);
+}
+
+// Hero
+.hero {
+    @include utilities.flex-center;
+    position: relative;
+    overflow: hidden;
+    min-height: calc(100dvh - 2px);
+}
+
+.hero-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/hero-bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(1) blur(0);
+}
+
+.hero-content{
+    position: relative;
+}
+
+.hero-greetings {
+    @include normalize-font-size(24px);
+    opacity: 0;
+}
+
+.hero-title {
+    @include normalize-font-size(64px);
+    letter-spacing: -0.15rem;
+    margin: 0;
+    @include normalize-rhythm(margin-left, 24px);
+    opacity: 0;
+    color: var(--sl-color-primary-200);
+}
+

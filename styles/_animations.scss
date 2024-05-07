@@ -1,0 +1,52 @@
+.dim {
+    animation-name: dim;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(1,0,.75,.95);
+}
+
+.slide-fade-in-right {
+    animation-name: slide-fade-in-right;
+    animation-fill-mode: forwards;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+}
+
+.fade-in {
+    animation-name: fade-in;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes dim {
+    from {
+        filter: brightness(100%) blur(0);
+    }  
+    to {
+        filter: brightness(50%) blur(5px);
+    } 
+}
+
+@keyframes slide-fade-in-right {
+    from {
+        transform: translateX(10vw);
+        opacity: 0;
+    }
+    50% {
+        opacity: 100%;
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100%;
+    }
+}
