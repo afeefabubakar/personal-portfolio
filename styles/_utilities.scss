@@ -7,6 +7,12 @@
     align-items: center;
 }
 
+@mixin flex-row-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @mixin padding-y($padding) {
     @include normalize-rhythm(padding-top, $padding);
     @include normalize-rhythm(padding-bottom, $padding);
