@@ -1,3 +1,7 @@
+var header = document.querySelector('header .container');
+if (header) {
+    header.classList.add('backdrop-blur');
+}
 var heroTitle = document.querySelector('.hero-title');
 var heroGreeting = document.querySelector('.hero-greetings');
 var heroBg = document.querySelector('.hero-bg');
