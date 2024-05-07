@@ -17,3 +17,8 @@
     @include normalize-rhythm(padding-top, $padding);
     @include normalize-rhythm(padding-bottom, $padding);
 }
+
+@mixin padding-x($padding) {
+    @include normalize-rhythm(padding-left, $padding);
+    @include normalize-rhythm(padding-right, $padding);
+}
