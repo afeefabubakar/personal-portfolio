@@ -7,10 +7,29 @@
 @import './theme';
 @import './typography';
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--sl-color-text-main);
     background-color: var(--sl-color-background-main);
     font-size: calc(15px + 0.390625vw);
+    scroll-behavior: smooth;
+}
+
+:target::before {
+    content: '';
+    display: block;
+    height: 85px;
+    margin: -85px 0 0;
+}
+
+:target::before {
+    content: '';
+    display: block;
+    height: 85px;
+    margin: -85px 0 0;
 }
 
 .container {
@@ -20,9 +39,88 @@ body {
     overflow-x: visible;
 }
 
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+}
+
 .section-title {
     @include normalize-rhythm(padding-bottom, 0.5rem);
     border-bottom: 2px solid var(--sl-color-border-1);
+    color: var(--sl-color-primary-400)
+}
+
+// Header
+header {
+    position: relative;
+    max-height: 85px;
+
+    .container {
+        @include utilities.flex-row-between;
+        @include utilities.padding-y(1.5rem);
+        box-sizing: border-box;
+        position: absolute;
+        width: 100dvw;
+        left: 50%;
+        z-index: 10;
+        transform: translateX(-50%);
+        backdrop-filter: blur(0);
+
+        @media screen and (min-width: vars.$breakpoint-md) {
+            @include utilities.padding-x(2rem);
+        }
+    }
+    nav {
+        display: flex;
+        gap: 0.75rem;
+
+        @media screen and (min-width: vars.$breakpoint-md) {
+            gap: 2rem;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: var(--sl-color-text-main);
+        transition: color 150ms ease-in-out;
+        font-weight: 500;
+    }
+    a:hover {
+        color: var(--sl-color-accent-200);
+    }
+    a:active {
+        color: var(--sl-color-accent-300);
+    }
+    span {
+        color: var(--sl-color-primary-500);
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    z-index: 10;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.back-to-top::part(base) {
+    border: 2px solid var(--sl-color-border-1);
+    display: hidden;
+}
+
+.back-to-top::part(base):hover {
+    background-color: var(--sl-color-primary-950);
+}
+
+.back-to-top::part(label) {
+    color: var(--sl-color-primary-400);
+    font-size: 1.25rem;
+    font-weight: 600;
 }
 
 // Hero
@@ -58,6 +156,6 @@ body {
     margin: 0;
     @include normalize-rhythm(margin-left, 24px);
     opacity: 0;
-    color: var(--sl-color-primary-200);
+    color: var(--sl-color-primary-300);
 }
 
