@@ -14,8 +14,6 @@ html {
 body {
     color: var(--sl-color-text-main);
     background-color: var(--sl-color-background-main);
-    font-size: calc(15px + 0.390625vw);
-    scroll-behavior: smooth;
 }
 
 :target::before {
@@ -33,7 +31,7 @@ body {
 }
 
 .container {
-    @include normalize-rhythm(padding, 0 16px);
+    @include normalize-rhythm(padding, 0 1);
     max-width: vars.$container-max-width;
     margin: 0 auto;
     overflow-x: visible;
@@ -56,31 +54,21 @@ body {
 
 // Header
 header {
-    position: relative;
-    max-height: 85px;
+    position: sticky;
+    height: 72px;
+    background-color: var(--sl-color-background-main);
+    border-bottom: 1px solid var(--sl-color-border-1);
+    width: 100dvw;
 
     .container {
         @include utilities.flex-row-between;
-        @include utilities.padding-y(1.5rem);
-        box-sizing: border-box;
-        position: absolute;
-        width: 100dvw;
-        left: 50%;
+        @include utilities.padding-y(1);
+        position: relative;
         z-index: 10;
-        transform: translateX(-50%);
-        backdrop-filter: blur(0);
-
-        @media screen and (min-width: vars.$breakpoint-md) {
-            @include utilities.padding-x(2rem);
-        }
     }
     nav {
         display: flex;
-        gap: 0.75rem;
-
-        @media screen and (min-width: vars.$breakpoint-md) {
-            gap: 2rem;
-        }
+        @include normalize-rhythm(gap, 0.75, $base-font-size);
     }
     a {
         text-decoration: none;
@@ -99,28 +87,6 @@ header {
         font-size: 2rem;
         font-weight: 600;
     }
-}
-
-.back-to-top {
-    position: fixed;
-    z-index: 10;
-    bottom: 2rem;
-    right: 2rem;
-}
-
-.back-to-top::part(base) {
-    border: 2px solid var(--sl-color-border-1);
-    display: hidden;
-}
-
-.back-to-top::part(base):hover {
-    background-color: var(--sl-color-primary-950);
-}
-
-.back-to-top::part(label) {
-    color: var(--sl-color-primary-400);
-    font-size: 1.25rem;
-    font-weight: 600;
 }
 
 // Hero
@@ -151,11 +117,69 @@ header {
 }
 
 .hero-title {
-    @include normalize-font-size(64px);
     letter-spacing: -0.15rem;
     margin: 0;
-    @include normalize-rhythm(margin-left, 24px);
+    @include normalize-rhythm(margin-left, 0.25, $base-font-size);
     opacity: 0;
     color: var(--sl-color-primary-300);
 }
 
+.hero-subtitle {
+    @include normalize-font-size(20px);
+    opacity: 0;
+}
+
+// About Me
+#about-me {
+    .container {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            border-radius: 6.5px;
+            writing-mode: vertical-lr;
+            color: var(--sl-color-primary-400);
+            border-right: 2px solid var(--sl-color-accent-400);
+            box-shadow: 5px 0 6px -2px var(--sl-color-accent-800);
+            @include normalize-font-size(32px);
+            
+            @media screen and (min-width: vars.$breakpoint-md) {
+                border-right: 0;
+                border-bottom: 2px solid var(--sl-color-accent-400);
+                box-shadow: 0 5px 5px -2px var(--sl-color-accent-800);
+                writing-mode: horizontal-tb;
+            }
+        }
+    }
+}
+
+.personal-values-container {
+    display: flex;
+    @include normalize-rhythm(gap, 1, $base-font-size);
+
+    @media screen and (min-width: vars.$breakpoint-md) {
+        gap: 0;
+        flex-direction: column;
+    }
+}
+
+.personal-values {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+    h3 {
+        position: relative;
+        color: var(--sl-color-primary-400);
+    }
+    @media screen and (min-width: vars.$breakpoint-md) {
+        @include normalize-rhythm(gap, 2, $base-font-size);
+        flex-direction: row;
+        justify-content: space-around;
+        flex-basis: 50%;
+    }
+}
+
+.personal-value-container {
+    width: 100%;
+}

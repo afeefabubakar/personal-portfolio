@@ -18,7 +18,7 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="styles/dark.css" />
     <link rel="stylesheet" href="styles/globals.css" />
-    <link rel="preload" fetchpriority="high" href="public/hero-bg.jpeg" as="image" type="image/jpeg" />
+    <!-- <link rel="preload" fetchpriority="high" href="public/hero-bg.jpeg" as="image" type="image/jpeg" /> -->
 
     <!-- Scripts -->
     <script
@@ -32,9 +32,15 @@
   </head>
 
   <body>
-    <sl-button variant="default" class="back-to-top" circle>
-      <sl-icon name="arrow-up" label="Back to top button"></sl-icon>
-    </sl-button>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg" alt="Nature background image"></div>
+      <div class="container hero-content">
+        <span class="hero-greetings">Hello, I'm</span>
+        <h1 class="hero-title">AFEEF</h1>
+        <span class="hero-subtitle">I'm a front-end developer</span>
+      </div>
+    </section>
     <header>
       <div class="container">
         <span>AFEEF</span>
@@ -45,21 +51,26 @@
         </nav>
       </div>
     </header>
-
+    <!-- About me -->
     <main>
-      <!-- Hero -->
-      <section class="hero">
-        <div class="hero-bg" alt="Nature background image"></div>
-        <div class="container hero-content">
-          <span class="hero-greetings">Hello, I'm</span>
-          <h1 class="hero-title">AFEEF</h1>
-        </div>
-      </section>
-      <!-- About me -->
       <section id="about-me">
         <div class="container">
-          <h2 class="section-title sr-only">About Me</h2>
-          <p>I have always been fascinated by programming, which I found out early on while studying for an Electronics Engineering degree. I decided to switch my career and started my journey in software development as a frontend developer in 2023 and has since been eager to develop my skills further.</p>
+          <div class="personal-values-container">
+            <h2>I value</h2>
+            <div class="personal-values">
+              <div class="personal-value-container">
+              <h3 class="personal-value">Attentiveness</h3>
+              <p>I possess a keen eye for details and a passion for crafting a visually appealing and user-friendly websites.</p>
+            </div>
+            <div class="personal-value-container">
+              <h3 class="personal-value">Kaizen</h3>
+              <p><em>Improvement</em>. I'm a firm believer in the compounding power of continuous development which is why I make it a life-long commitment to improve myself.</p>
+            </div>
+            <div class="personal-value-container">
+              <h3 class="personal-value">Adaptability</h3>
+              <p>Amidst the ever-changing tech landscape, being able to adapt to new challenges and requirements are essential.</p>
+            </div>
+          </div>
         </div>
       </section>
       <!-- Projects -->
