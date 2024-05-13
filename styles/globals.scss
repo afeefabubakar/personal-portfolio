@@ -193,14 +193,47 @@ header {
 // Projects
 #projects {
     background-color: var(--sl-color-background-light);
+    @include normalize-rhythm(padding-bottom, 0.5, $base-font-size);
 }
 
-:host,
-.projects-carousel::part(base) {
-    @include utilities.margin-y(1);
+.projects-card-container {
+    display: flex;
+    flex-direction: column;
+    @include normalize-rhythm(gap, 1, $base-font-size);
 }
 
-:host,
-.projects-carousel::part(scroll-container) {
-    @include normalize-rhythm(gap, 2.5, $base-font-size);
+.project-card {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--sl-color-border-2);
+    box-sizing: border-box;
+    @include normalize-rhythm(padding-bottom, 0.01, $base-font-size);
+
+    
+    @media screen and (min-width: vars.$breakpoint-lg) {
+        max-width: unset;
+        min-height: unset;
+        width: 100%;
+        flex-direction: row;
+        @include normalize-rhythm(padding-bottom, 1, $base-font-size);
+    }
+
+    img {
+        width: 100%;
+        
+        @media screen and (min-width: vars.$breakpoint-lg) {
+            height: 200px;
+            width: auto; 
+        }
+    }
+}
+
+.project-card:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.project-card-content {
+    @media screen and (min-width: vars.$breakpoint-lg) {
+        @include utilities.padding-x(1);
+    }
 }
