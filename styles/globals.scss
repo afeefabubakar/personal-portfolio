@@ -16,18 +16,11 @@ body {
     background-color: var(--sl-color-background-main);
 }
 
-:target::before {
+:target:nth-child(1):before {
     content: '';
     display: block;
-    height: 85px;
-    margin: -85px 0 0;
-}
-
-:target::before {
-    content: '';
-    display: block;
-    height: 85px;
-    margin: -85px 0 0;
+    height: 72px;
+    margin: -72px 0 0;
 }
 
 .container {
@@ -56,15 +49,15 @@ body {
 header {
     position: sticky;
     height: 72px;
-    background-color: var(--sl-color-background-main);
     border-bottom: 1px solid var(--sl-color-border-1);
-    width: 100dvw;
-
+    top: 0;
+    z-index: 99;
+    background-color: var(--sl-color-background-main);
+    
     .container {
         @include utilities.flex-row-between;
         @include utilities.padding-y(1);
         position: relative;
-        z-index: 10;
     }
     nav {
         display: flex;
@@ -77,10 +70,10 @@ header {
         font-weight: 500;
     }
     a:hover {
-        color: var(--sl-color-accent-200);
+        color: var(--sl-color-secondary-200);
     }
     a:active {
-        color: var(--sl-color-accent-300);
+        color: var(--sl-color-secondary-300);
     }
     span {
         color: var(--sl-color-primary-500);
@@ -112,7 +105,7 @@ header {
 }
 
 .hero-greetings {
-    @include normalize-font-size(24px);
+    @include normalize-font-size(32px);
     opacity: 0;
 }
 
@@ -125,7 +118,7 @@ header {
 }
 
 .hero-subtitle {
-    @include normalize-font-size(20px);
+    @include normalize-font-size(32px);
     opacity: 0;
 }
 
@@ -134,31 +127,50 @@ header {
     .container {
         display: flex;
         flex-direction: column;
-        h2 {
-            border-radius: 6.5px;
-            writing-mode: vertical-lr;
-            color: var(--sl-color-primary-400);
-            border-right: 2px solid var(--sl-color-accent-400);
-            box-shadow: 5px 0 6px -2px var(--sl-color-accent-800);
-            @include normalize-font-size(32px);
-            
-            @media screen and (min-width: vars.$breakpoint-md) {
-                border-right: 0;
-                border-bottom: 2px solid var(--sl-color-accent-400);
-                box-shadow: 0 5px 5px -2px var(--sl-color-accent-800);
-                writing-mode: horizontal-tb;
-            }
+
+        @media screen and (min-width: vars.$breakpoint-lg) {
+           flex-direction: row; 
+           @include normalize-rhythm(gap, 2, $base-font-size);
         }
+    }
+}
+
+.self-introduction-container {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    @include normalize-rhythm(margin-top, 1.125, $base-font-size);
+
+    img {
+        width: 240px;
+        align-self: center;
+        border-radius: 9999px;
+        border: 2px solid var(--sl-color-secondary-400);
+        aspect-ratio: 1 / 1;
     }
 }
 
 .personal-values-container {
     display: flex;
     @include normalize-rhythm(gap, 1, $base-font-size);
-
+    
     @media screen and (min-width: vars.$breakpoint-md) {
-        gap: 0;
-        flex-direction: column;
+        @include normalize-rhythm(margin-top, 1.125, $base-font-size);
+    }
+}
+
+.i-value {
+    position: relative;
+    border-radius: 6.5px;
+    border-right: 2px solid var(--sl-color-secondary-400);
+    box-shadow: 5px 0 6px -2px var(--sl-color-secondary-800);
+    writing-mode: vertical-lr;
+    
+    h2 {
+        position: sticky;
+        height: fit-content;
+        @include normalize-rhythm(top, 1.5, $base-font-size);
+        @include normalize-font-size(38px);
     }
 }
 
@@ -167,19 +179,28 @@ header {
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+
     h3 {
         position: relative;
         color: var(--sl-color-primary-400);
-    }
-    @media screen and (min-width: vars.$breakpoint-md) {
-        @include normalize-rhythm(gap, 2, $base-font-size);
-        flex-direction: row;
-        justify-content: space-around;
-        flex-basis: 50%;
     }
 }
 
 .personal-value-container {
     width: 100%;
+}
+
+// Projects
+#projects {
+    background-color: var(--sl-color-background-light);
+}
+
+:host,
+.projects-carousel::part(base) {
+    @include utilities.margin-y(1);
+}
+
+:host,
+.projects-carousel::part(scroll-container) {
+    @include normalize-rhythm(gap, 2.5, $base-font-size);
 }
