@@ -22,3 +22,8 @@
     @include normalize-rhythm(padding-left, $padding);
     @include normalize-rhythm(padding-right, $padding);
 }
+
+@mixin margin-y($margin) {
+    @include normalize-rhythm(margin-top, $margin);
+    @include normalize-rhythm(margin-bottom, $margin);
+}
