@@ -70,10 +70,10 @@ header {
         font-weight: 500;
     }
     a:hover {
-        color: var(--sl-color-secondary-200);
+        color: var(--sl-color-primary-300);
     }
     a:active {
-        color: var(--sl-color-secondary-300);
+        color: var(--sl-color-primary-400);
     }
     span {
         color: var(--sl-color-primary-500);
@@ -163,15 +163,27 @@ header {
     position: relative;
     border-radius: 6.5px;
     border-right: 2px solid var(--sl-color-secondary-400);
-    box-shadow: 5px 0 6px -2px var(--sl-color-secondary-800);
     writing-mode: vertical-lr;
     
     h2 {
         position: sticky;
         height: fit-content;
-        @include normalize-rhythm(top, 1.5, $base-font-size);
+        @include normalize-rhythm(top, 6, $base-font-size);
         @include normalize-font-size(38px);
     }
+}
+
+.i-value:before, .i-value:after {
+  content: " ";
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 15px;
+}
+
+.i-value:after {
+  box-shadow: 15px 0 15px -15px inset var(--sl-color-secondary-400);
+  right: -15px;
 }
 
 .personal-values {
@@ -193,7 +205,7 @@ header {
 // Projects
 #projects {
     background-color: var(--sl-color-background-light);
-    @include normalize-rhythm(padding-bottom, 0.5, $base-font-size);
+    @include normalize-rhythm(padding-bottom, 1.125, $base-font-size);
 }
 
 .projects-card-container {
@@ -220,20 +232,49 @@ header {
 
     img {
         width: 100%;
+        border-radius: 12px;
         
         @media screen and (min-width: vars.$breakpoint-lg) {
-            height: 200px;
             width: auto; 
+            max-width: 400px;
         }
+    }
+}
+
+.project-card-title {
+    a {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+        
+    h3 {
+        transition: color 100ms ease-out;
+        margin: 0;
+    }
+
+    h3:hover {
+        color: var(--sl-color-primary-400);
     }
 }
 
 .project-card:nth-last-child(1) {
     border-bottom: none;
+    padding-bottom: 0;
 }
 
 .project-card-content {
     @media screen and (min-width: vars.$breakpoint-lg) {
         @include utilities.padding-x(1);
+    }
+}
+
+.tech-stack {
+    color: var(--sl-color-primary-400);
+
+    a {
+        @include normalize-font-size(16px);
+        color: var(--sl-color-primary-400);
+        text-decoration: underline;
     }
 }
