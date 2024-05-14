@@ -18,7 +18,6 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"></noscript>
     <link rel="stylesheet" href="styles/dark.css" />
     <link rel="stylesheet" href="styles/globals.css" />
-    <!-- <link rel="preload" fetchpriority="high" href="public/hero-bg.jpeg" as="image" type="image/jpeg" /> -->
 
     <!-- Scripts -->
     <script
@@ -83,9 +82,24 @@
       <section id="projects">
         <div class="container">
           <h2>What I've built</h2>
-        
+          <div class="projects-card-container">
+            <article class="project-card">
+              <img src="/public/project-1.png" alt="Project" />
+              <div class="project-card-content">
+                <div class="project-card-title" style="display: flex; align-items: center; gap: 0.25rem;">
+                  <a href="https://faithevents.plus" target="_blank">
+                    <h3>Faith Events Plus </h3> 
+                    <sl-icon name="launch" library="material" style="font-size: 24px"></sl-icon>
+                  </a>
+                </div>
+                <p>Implemented on-demand module for Faith Events, organizer of Islamic events in Malaysia, which allows user to purchase access to videos of past events.</p>
+                <p class="tech-stack">Tech stack: <a href="https://nextjs.org" target="_blank">Next.js</a>, <a href="https://tailwindcss.com" target="_blank">TailwindCSS</a></p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
+      <!-- Contact -->
     </main>
   </body>
 </html>
