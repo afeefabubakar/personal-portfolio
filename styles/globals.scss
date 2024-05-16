@@ -153,6 +153,7 @@ header {
 .personal-values-container {
     display: flex;
     @include normalize-rhythm(gap, 1, $base-font-size);
+    @include normalize-rhythm(margin-bottom, 1.125, $base-font-size);
     
     @media screen and (min-width: vars.$breakpoint-md) {
         @include normalize-rhythm(margin-top, 1.125, $base-font-size);
@@ -205,7 +206,11 @@ header {
 // Projects
 #projects {
     background-color: var(--sl-color-background-light);
-    @include normalize-rhythm(padding-bottom, 1.125, $base-font-size);
+    @include utilities.padding-y(1.125);
+
+    .container h2 {
+        margin-top: 0;
+    }
 }
 
 .projects-card-container {
@@ -278,3 +283,5 @@ header {
         text-decoration: underline;
     }
 }
+
+// Contact
