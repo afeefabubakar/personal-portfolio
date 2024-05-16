@@ -159,7 +159,6 @@ header {
 
 .i-value {
     position: relative;
-    border-radius: 6.5px;
     border-right: 2px solid var(--sl-color-secondary-400);
     writing-mode: vertical-lr;
     
@@ -294,6 +293,7 @@ header {
     @include normalize-rhythm(gap, 1, $base-font-size);
     @media screen and (min-width: vars.$breakpoint-sm) {
         flex-direction: row;
+        @include normalize-rhythm(gap, 2, $base-font-size);
     }
 
     a {
