@@ -16,6 +16,14 @@ body {
     background-color: var(--sl-color-background-main);
 }
 
+a {
+    transition: color 100ms ease-in;
+}
+
+a:hover {
+    color: var(--sl-color-secondary-300);
+}
+
 :target:nth-child(1):before {
     content: '';
     display: block;
@@ -63,18 +71,6 @@ header {
         display: flex;
         @include normalize-rhythm(gap, 0.75, $base-font-size);
     }
-    a {
-        text-decoration: none;
-        color: var(--sl-color-text-main);
-        transition: color 150ms ease-in-out;
-        font-weight: 500;
-    }
-    a:hover {
-        color: var(--sl-color-primary-300);
-    }
-    a:active {
-        color: var(--sl-color-primary-400);
-    }
     span {
         color: var(--sl-color-primary-500);
         font-size: 2rem;
@@ -120,6 +116,7 @@ header {
 .hero-subtitle {
     @include normalize-font-size(32px);
     opacity: 0;
+    white-space: nowrap;
 }
 
 // About Me
@@ -237,6 +234,7 @@ header {
 
     img {
         width: 100%;
+        aspect-ratio: 16 / 9;
         border-radius: 12px;
         
         @media screen and (min-width: vars.$breakpoint-lg) {
@@ -256,10 +254,6 @@ header {
     h3 {
         transition: color 100ms ease-out;
         margin: 0;
-    }
-
-    h3:hover {
-        color: var(--sl-color-primary-400);
     }
 }
 
@@ -285,3 +279,30 @@ header {
 }
 
 // Contact
+#contact {
+    .container {
+        text-align: center;
+    }
+}
+
+#contact-links {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+    @include normalize-rhythm(gap, 1, $base-font-size);
+    @media screen and (min-width: vars.$breakpoint-sm) {
+        flex-direction: row;
+    }
+
+    a {
+        @include normalize-font-size(32px);
+    }
+}
+
+// Footer
+footer {
+    @include normalize-rhythm(margin-top, 2, $base-font-size);
+    text-align: center;
+}
