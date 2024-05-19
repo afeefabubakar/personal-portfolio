@@ -1,9 +1,9 @@
-const heroTitle: HTMLElement | null = document.querySelector('.hero-title');
+const heroTitle: HTMLElement | null = document.querySelector('#hero-title');
 const heroSubtitle: HTMLElement | null =
-  document.querySelector('.hero-subtitle');
+  document.querySelector('#hero-subtitle');
 const heroGreeting: HTMLElement | null =
-  document.querySelector('.hero-greetings');
-const heroBg: HTMLElement | null = document.querySelector('.hero-bg');
+  document.querySelector('#hero-greetings');
+const heroBg: HTMLElement | null = document.querySelector('#hero-bg');
 
 if (heroBg && heroTitle && heroGreeting) {
   heroBg.classList.add('dim');
