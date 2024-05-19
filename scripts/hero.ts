@@ -10,7 +10,6 @@ if (heroBg && heroTitle && heroGreeting) {
   heroBg.addEventListener('animationend', () => {
     heroGreeting.classList.add('fade-in');
     heroGreeting.addEventListener('animationend', () => {
-      heroTitle.classList.add('slide-fade-in-right');
       heroSubtitle?.classList.add('fade-in');
     });
   });
