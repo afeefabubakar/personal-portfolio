@@ -233,7 +233,7 @@ header {
 
     img {
         width: 100%;
-        aspect-ratio: 16 / 9;
+        height: 100%;
         border-radius: 12px;
         
         @media screen and (min-width: vars.$breakpoint-lg) {
