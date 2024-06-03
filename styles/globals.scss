@@ -24,11 +24,10 @@ a:hover {
     color: var(--sl-color-secondary-300);
 }
 
-:target:nth-child(1):before {
-    content: '';
-    display: block;
-    height: 72px;
-    margin: -72px 0 0;
+#aboutMe,
+#projects,
+#contact {
+    scroll-margin-top: 72px;
 }
 
 .container {
@@ -95,7 +94,7 @@ header {
 }
 
 // About Me
-#about-me {
+#aboutMe {
     .container {
         display: flex;
         flex-direction: column;
