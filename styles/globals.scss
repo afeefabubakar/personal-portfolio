@@ -211,8 +211,8 @@ header {
         border-radius: 12px;
         
         @media screen and (min-width: vars.$breakpoint-lg) {
-            width: auto; 
-            max-width: 400px;
+            height: 210px;
+            width: 400px; 
         }
     }
 }
