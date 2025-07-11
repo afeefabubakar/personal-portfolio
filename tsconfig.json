@@ -2,7 +2,8 @@
   "compilerOptions": {
     "module": "amd",
     "target": "es5",
-    "outFile": "dist/app.js"
+    "outFile": "dist/app.js",
+    "lib": ["dom", "es2015"]
   },
   "include": ["**/*"]
 }
