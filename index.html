@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta 
-      name="description" 
-      content="Hi! I'm Afeef bin Abu Bakar, a front-end developer from Sarawak, Malaysia. This website had been built to showcase my skills and projects." 
+    <meta
+      name="description"
+      content="Hi! I'm Afeef bin Abu Bakar, a front-end developer from Sarawak, Malaysia. This website had been built to showcase my skills and projects."
     />
     <title>Afeef | Software Engineer</title>
 
@@ -17,29 +17,60 @@
     />
     <meta property="og:image" content="https://afeef.dev/public/afeef.jpg" />
     <meta property="og:type" content="website" />
-    <meta name="google-site-verification" content="hoyOLdV4gWLfYoNe04DV3NobQ7HKo0SEaU36o6v8smI" />
+    <meta
+      name="google-site-verification"
+      content="hoyOLdV4gWLfYoNe04DV3NobQ7HKo0SEaU36o6v8smI"
+    />
 
     <!-- Stylesheets -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link 
-      rel="preload" 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
-      as="style" 
+      as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet"></noscript>
+    <noscript
+      ><link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet"
+    /></noscript>
     <link rel="stylesheet" href="styles/globals.css" />
-    <link rel="preload" fetchpriority="high" href="/public/hero-bg.webp" as="image" type="image/webp" />
+    <link
+      rel="preload"
+      fetchpriority="high"
+      href="/public/hero-bg.webp"
+      as="image"
+      type="image/webp"
+    />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/apple-touch-icon.png"
+    />
     <link rel="icon" href="favicon.ico" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/public/safari-pinned-tab.svg" color="#d0b09f">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="theme-color" content="#13183a">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="/public/safari-pinned-tab.svg"
+      color="#d0b09f"
+    />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#13183a" />
 
     <!-- Scripts -->
     <script type="module" src="dist/app.min.js" defer></script>
@@ -47,47 +78,97 @@
 
   <body>
     <!-- Hero -->
-    <section id="hero" style="
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      min-height: 100vh;
-    ">
-      <div id="hero-bg" alt="Nature background image" style="
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-image: url('public/hero-bg.webp');
-        background-size: cover;
-        background-position: center;
-        filter: brightness(1) blur(0);
-      "></div>
-      <div id="hero-content" style="position: relative;">
-        <span id="hero-greetings" style="
-          opacity: 0; 
-          font-size: 2em;
-        ">Hello, I'm</span>
-        <h1 id="hero-title" style="
-          letter-spacing: -0.15rem;
-          margin: 0;
-          opacity: 1;
-          margin-left: 0.375em;
-          color: hsl(192, 33%, 82%);
-        ">AFEEF</h1>
-        <span id="hero-subtitle" style="
-          opacity: 0;
-          font-size: 2em;
-          white-space: nowrap;
-        ">A front-end developer</span>
+    <section
+      id="hero"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        min-height: 100vh;
+      "
+    >
+      <div
+        id="hero-bg"
+        alt="Nature background image"
+        style="
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-image: url('public/hero-bg.webp');
+          background-size: cover;
+          background-position: center;
+          filter: brightness(1) blur(0);
+        "
+      ></div>
+      <div id="hero-content" style="position: relative">
+        <span id="hero-greetings" style="opacity: 0; font-size: 2em"
+          >Hello, I'm</span
+        >
+        <h1
+          id="hero-title"
+          style="
+            letter-spacing: -0.15rem;
+            margin: 0;
+            opacity: 1;
+            margin-left: 0.375em;
+            color: hsl(192, 33%, 82%);
+          "
+        >
+          AFEEF
+        </h1>
+        <span
+          id="hero-subtitle"
+          style="opacity: 0; font-size: 2em; white-space: nowrap"
+          >A front-end developer</span
+        >
       </div>
     </section>
     <header>
       <div class="container">
         <a id="logo-link" href="/">
           <div id="logo-container">
-            <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1008.91 1010.17"><g id="Moon"><path d="M751.62,71.14c-.03.06-2.5-1.45-7.1-4.05-81.21-45.9-154.39-56.51-154.39-56.51-91.88-17.32-165.5-3.51-183.18.07-19.3,3.9-96.69,20.85-179.07,78.38-82.57,57.67-125.08,124.65-145.14,156.9-18.99,30.54-53.63,87.4-69.66,170.74-5.4,28.04-12.14,77-5.81,137.29,2.48,23.64,14.36,119.37,81.28,220.35,20.18,30.46,63.33,88.49,137.01,139.59,85.26,59.13,165.89,77.42,195.06,83.06,76.08,14.71,135.75,7.89,152.1,5.77,13.88-1.8,81-11.14,160.23-51.91,33.84-17.41,137.11-72.17,206.67-186.89,63.34-104.46,72.13-214.76,68.5-215.73-1.51-.4-1.08,76.49-48.77,149.98h0s0,0,0,0c-15.34,27.72-37.58,60.37-70.06,91.41-163.19,155.95-464.64,156.28-621.88,28.59-5.94-4.83-36.08-29.84-67.46-70.47-28.01-36.28-84.61-121.01-92.72-241.96-3.38-50.37-.82-141.32,49.64-234.52,34.41-63.55,77.01-102.17,100.22-122.84,26.66-23.75,79.58-69.94,162.97-97.71,152.54-50.81,285.24.56,302.34,8.14,2.38,1.06,29.51,11.7,29.22,12.33Z" fill="#d0b09f" stroke-width="0"/><path d="M751.62,71.14C653.51,13.58,535.2-7.71,423.03,10.08,283.05,34.44,158.58,125.42,86.81,247.24-62.5,476,14.85,766.55,236.79,915.75c116.74,78.02,268.39,109.67,404.27,68.36,182.15-55.1,322.46-193.71,361.16-382.41,2.87-13.93,5.22-28,6.28-42.19.19-3.52.53-7.14-.04-10.63-.06-.21-.12-.43-.25-.58-.13-.2-.18.19-.23.36-.09.43-.14.87-.2,1.31,0,0-.28,2.65-.28,2.65-4.52,51.41-19.74,102.18-47.35,146.04-110.96,207.1-397.99,261.07-604.39,174.94-151.91-63.49-250.05-228.73-252.07-390.89-2.28-121.57,46.43-239.04,136.39-321.25,31.77-29.68,65.75-57.31,103.85-78.51,113.58-64.38,256.75-72.72,377.83-24.62,8.52,3.49,17.75,7.37,26.27,10.96,0,0,1.85.84,1.85.84,0,0,.91.45.91.45.28.17.64.28.83.55h0ZM751.62,71.14c-.19-.27-.55-.38-.84-.55,0,0-.92-.44-.92-.44s-1.86-.83-1.86-.83c-2.63-1.19-8.58-3.54-11.27-4.66-74.73-31.83-158.39-42.01-238.75-31.07-86,11.53-167,50.88-231.41,108.68-32.69,28.24-63.07,59.47-87.02,95.54-72.83,107.5-89.67,249.03-49.5,371.93,32.46,99.42,104.5,196.87,198.56,245.2,96.08,49.68,208.8,62.62,315.12,46.87,129.41-19.09,251.5-87.63,314.83-204.17,27.67-41.4,43.28-90.32,48.28-139.72.22-1.88.59-6.15.81-7.97.06-.44.11-.88.2-1.32.05-.11.07-.69.42-.42.17.19.22.41.28.63.61,3.53.25,7.12.09,10.67-.99,14.21-3.34,28.29-6.07,42.26-8.42,41.92-21.69,82.84-39.71,121.66-41.79,91.4-115.47,165.81-202.07,215.73-68.07,39.19-144.48,66.9-223.46,70.43C238.9,1024.06-23.59,764.42,1.69,464.07c8.38-97.61,45.69-178.01,101.9-256.95C178.37,102.24,294.95,26.77,422.31,5.54c115.18-17.47,229.16,6.88,329.31,65.6h0Z" fill="#d0b09f" stroke-width="0"/></g><g id="Name"><path d="M649.25,255.58l-33.65-33.43h-133.29l-33.95,33.73-32.69,32.48v461.9l50.11,1.22,16.53.4v-231.76h133.29v165.63l66.44,66.13h.2v-463.52l-32.99-32.78ZM615.61,453.91h-133.29v-132.44l33.33-33.11h66.64l33.33,33.11v132.44Z" fill="#d0b09f" stroke="#d0b09f" stroke-miterlimit="10" stroke-width="18"/><polygon points="482.06 751.48 482.06 289.35 415.61 223.33 282.73 223.33 216.28 289.35 216.28 355.37 282.73 355.37 282.73 322.36 315.95 289.35 382.39 289.35 415.61 322.36 415.61 355.37 415.61 454.4 282.73 454.4 282.73 520.42 415.61 520.42 415.61 751.48 482.06 751.48" fill="#d0b09f" stroke="#d0b09f" stroke-miterlimit="10" stroke-width="18"/><polygon points="814.93 355.18 814.93 322.12 781.71 289.05 715.26 289.05 682.25 321.91 682.05 322.12 682.05 454.35 814.93 454.35 814.93 520.47 682.05 520.47 682.05 652.7 682.25 652.9 715.26 685.76 781.71 685.76 814.93 652.7 814.93 619.65 881.38 619.65 881.38 685.76 814.93 751.88 682.05 751.88 615.61 685.76 615.61 289.05 649.25 255.58 682.05 222.94 814.93 222.94 881.38 289.05 881.38 355.18 814.93 355.18" fill="#d0b09f" stroke="#d0b09f" stroke-miterlimit="10" stroke-width="18"/></g></svg>
+            <?xml version="1.0" encoding="UTF-8"?><svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1008.91 1010.17"
+            >
+              <g id="Moon">
+                <path
+                  d="M751.62,71.14c-.03.06-2.5-1.45-7.1-4.05-81.21-45.9-154.39-56.51-154.39-56.51-91.88-17.32-165.5-3.51-183.18.07-19.3,3.9-96.69,20.85-179.07,78.38-82.57,57.67-125.08,124.65-145.14,156.9-18.99,30.54-53.63,87.4-69.66,170.74-5.4,28.04-12.14,77-5.81,137.29,2.48,23.64,14.36,119.37,81.28,220.35,20.18,30.46,63.33,88.49,137.01,139.59,85.26,59.13,165.89,77.42,195.06,83.06,76.08,14.71,135.75,7.89,152.1,5.77,13.88-1.8,81-11.14,160.23-51.91,33.84-17.41,137.11-72.17,206.67-186.89,63.34-104.46,72.13-214.76,68.5-215.73-1.51-.4-1.08,76.49-48.77,149.98h0s0,0,0,0c-15.34,27.72-37.58,60.37-70.06,91.41-163.19,155.95-464.64,156.28-621.88,28.59-5.94-4.83-36.08-29.84-67.46-70.47-28.01-36.28-84.61-121.01-92.72-241.96-3.38-50.37-.82-141.32,49.64-234.52,34.41-63.55,77.01-102.17,100.22-122.84,26.66-23.75,79.58-69.94,162.97-97.71,152.54-50.81,285.24.56,302.34,8.14,2.38,1.06,29.51,11.7,29.22,12.33Z"
+                  fill="#d0b09f"
+                  stroke-width="0"
+                />
+                <path
+                  d="M751.62,71.14C653.51,13.58,535.2-7.71,423.03,10.08,283.05,34.44,158.58,125.42,86.81,247.24-62.5,476,14.85,766.55,236.79,915.75c116.74,78.02,268.39,109.67,404.27,68.36,182.15-55.1,322.46-193.71,361.16-382.41,2.87-13.93,5.22-28,6.28-42.19.19-3.52.53-7.14-.04-10.63-.06-.21-.12-.43-.25-.58-.13-.2-.18.19-.23.36-.09.43-.14.87-.2,1.31,0,0-.28,2.65-.28,2.65-4.52,51.41-19.74,102.18-47.35,146.04-110.96,207.1-397.99,261.07-604.39,174.94-151.91-63.49-250.05-228.73-252.07-390.89-2.28-121.57,46.43-239.04,136.39-321.25,31.77-29.68,65.75-57.31,103.85-78.51,113.58-64.38,256.75-72.72,377.83-24.62,8.52,3.49,17.75,7.37,26.27,10.96,0,0,1.85.84,1.85.84,0,0,.91.45.91.45.28.17.64.28.83.55h0ZM751.62,71.14c-.19-.27-.55-.38-.84-.55,0,0-.92-.44-.92-.44s-1.86-.83-1.86-.83c-2.63-1.19-8.58-3.54-11.27-4.66-74.73-31.83-158.39-42.01-238.75-31.07-86,11.53-167,50.88-231.41,108.68-32.69,28.24-63.07,59.47-87.02,95.54-72.83,107.5-89.67,249.03-49.5,371.93,32.46,99.42,104.5,196.87,198.56,245.2,96.08,49.68,208.8,62.62,315.12,46.87,129.41-19.09,251.5-87.63,314.83-204.17,27.67-41.4,43.28-90.32,48.28-139.72.22-1.88.59-6.15.81-7.97.06-.44.11-.88.2-1.32.05-.11.07-.69.42-.42.17.19.22.41.28.63.61,3.53.25,7.12.09,10.67-.99,14.21-3.34,28.29-6.07,42.26-8.42,41.92-21.69,82.84-39.71,121.66-41.79,91.4-115.47,165.81-202.07,215.73-68.07,39.19-144.48,66.9-223.46,70.43C238.9,1024.06-23.59,764.42,1.69,464.07c8.38-97.61,45.69-178.01,101.9-256.95C178.37,102.24,294.95,26.77,422.31,5.54c115.18-17.47,229.16,6.88,329.31,65.6h0Z"
+                  fill="#d0b09f"
+                  stroke-width="0"
+                />
+              </g>
+              <g id="Name">
+                <path
+                  d="M649.25,255.58l-33.65-33.43h-133.29l-33.95,33.73-32.69,32.48v461.9l50.11,1.22,16.53.4v-231.76h133.29v165.63l66.44,66.13h.2v-463.52l-32.99-32.78ZM615.61,453.91h-133.29v-132.44l33.33-33.11h66.64l33.33,33.11v132.44Z"
+                  fill="#d0b09f"
+                  stroke="#d0b09f"
+                  stroke-miterlimit="10"
+                  stroke-width="18"
+                />
+                <polygon
+                  points="482.06 751.48 482.06 289.35 415.61 223.33 282.73 223.33 216.28 289.35 216.28 355.37 282.73 355.37 282.73 322.36 315.95 289.35 382.39 289.35 415.61 322.36 415.61 355.37 415.61 454.4 282.73 454.4 282.73 520.42 415.61 520.42 415.61 751.48 482.06 751.48"
+                  fill="#d0b09f"
+                  stroke="#d0b09f"
+                  stroke-miterlimit="10"
+                  stroke-width="18"
+                />
+                <polygon
+                  points="814.93 355.18 814.93 322.12 781.71 289.05 715.26 289.05 682.25 321.91 682.05 322.12 682.05 454.35 814.93 454.35 814.93 520.47 682.05 520.47 682.05 652.7 682.25 652.9 715.26 685.76 781.71 685.76 814.93 652.7 814.93 619.65 881.38 619.65 881.38 685.76 814.93 751.88 682.05 751.88 615.61 685.76 615.61 289.05 649.25 255.58 682.05 222.94 814.93 222.94 881.38 289.05 881.38 355.18 814.93 355.18"
+                  fill="#d0b09f"
+                  stroke="#d0b09f"
+                  stroke-miterlimit="10"
+                  stroke-width="18"
+                />
+              </g>
+            </svg>
           </div>
         </a>
         <nav>
@@ -103,24 +184,50 @@
         <div class="container">
           <div class="self-introduction-container">
             <img src="public/afeef.webp" alt="Afeef's profile picture" />
-            <p class="self-introduction">Hello! I am Afeef bin Abu Bakar, a fulltime front-end developer hailing from Sarawak located on the island of Borneo but is currently based in Kuala Lumpur, Malaysia. I started my web development journey in 2023 after two years of working as a radar maintenance engineer which is when I found out that I would rather pursue a career in software development.<br /><br />When I am not coding, you can find me at the gym, playing video games, playing a guitar, or just out exploring the city.</p>
+            <p class="self-introduction">
+              Hello! I am Afeef bin Abu Bakar, a fulltime front-end developer
+              hailing from Sarawak located on the island of Borneo but is
+              currently based in Kuala Lumpur, Malaysia. I started my web
+              development journey in 2023 after two years of working as a radar
+              maintenance engineer which is when I found out that I would rather
+              pursue a career in software development.<br /><br />When I am not
+              coding, you can find me at the gym, playing video games, playing a
+              guitar, or just out exploring the city.
+            </p>
           </div>
-            <div class="personal-values-container">
-              <div class="i-value">
+          <div class="personal-values-container">
+            <div class="i-value">
               <h2>I value</h2>
             </div>
-            <div class="personal-values">
-              <div class="personal-value-container">
-              <h3 class="personal-value">Attentiveness</h3>
-              <p>A keen eye for details and a passion for crafting a visually appealing and user-friendly websites.</p>
-            </div>
-            <div class="personal-value-container">
-              <h3 class="personal-value">Adaptability</h3>
-              <p>Amidst the ever-changing tech landscape, I believe that being able to adapt to new challenges and requirements are essential.</p>
-            </div>
-            <div class="personal-value-container">
-              <h3 class="personal-value">Kaizen</h3>
-              <p><em>Improvement</em>. The compounding power of continuous improvement is why I make it a life-long commitment to continue learning.</p>
+            <div class="personal-values-content">
+              <div class="personal-values-mask-container">
+                <div class="personal-values-mask"></div>
+              </div>
+              <div class="personal-values">
+                <div class="personal-value-container">
+                  <h3 class="personal-value">Attentiveness</h3>
+                  <p>
+                    A keen eye for details and a passion for crafting a visually
+                    appealing and user-friendly websites.
+                  </p>
+                </div>
+                <div class="personal-value-container">
+                  <h3 class="personal-value">Adaptability</h3>
+                  <p>
+                    Amidst the ever-changing tech landscape, I believe that
+                    being able to adapt to new challenges and requirements are
+                    essential.
+                  </p>
+                </div>
+                <div class="personal-value-container">
+                  <h3 class="personal-value">Kaizen</h3>
+                  <p>
+                    <em>Improvement</em>. The compounding power of continuous
+                    improvement is why I make it a life-long commitment to
+                    continue learning.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -132,32 +239,74 @@
           <div class="projects-card-container">
             <article class="project-card">
               <a href="https://faithevents.plus" target="_blank">
-                <img src="/public/project-1.webp" alt="Faith Events project image" class="projects-image" />
+                <img
+                  src="/public/project-1.webp"
+                  alt="Faith Events project image"
+                  class="projects-image"
+                />
               </a>
               <div class="project-card-content">
-                <div class="project-card-title" style="display: flex; align-items: center; gap: 0.25rem;">
+                <div
+                  class="project-card-title"
+                  style="display: flex; align-items: center; gap: 0.25rem"
+                >
                   <a href="https://faithevents.plus" target="_blank">
-                    <h3>Faith Events Plus</h3> 
-                    <sl-icon name="launch" library="material" style="font-size: 24px"></sl-icon>
+                    <h3>Faith Events Plus</h3>
+                    <sl-icon
+                      name="launch"
+                      library="material"
+                      style="font-size: 24px"
+                    ></sl-icon>
                   </a>
                 </div>
-                <p>Faith Events is the foremost organizer of Islamic events in Malaysia. Faith Events Plus provides a platform for people to purchase on-demand videos of past events.</p>
-                <p class="tech-stack">Tech stack: <a href="https://nextjs.org" target="_blank">Next.js</a>, <a href="https://tailwindcss.com" target="_blank">TailwindCSS</a></p>
+                <p>
+                  Faith Events is the foremost organizer of Islamic events in
+                  Malaysia. Faith Events Plus provides a platform for people to
+                  purchase on-demand videos of past events.
+                </p>
+                <p class="tech-stack">
+                  Tech stack:
+                  <a href="https://nextjs.org" target="_blank">Next.js</a>,
+                  <a href="https://tailwindcss.com" target="_blank"
+                    >TailwindCSS</a
+                  >
+                </p>
               </div>
             </article>
             <article class="project-card">
               <a href="https://www.msh.my" target="_blank">
-                <img src="/public/project-2.webp" alt="Malaysian Society of Hypertension project image" class="projects-image" />
+                <img
+                  src="/public/project-2.webp"
+                  alt="Malaysian Society of Hypertension project image"
+                  class="projects-image"
+                />
               </a>
               <div class="project-card-content">
-                <div class="project-card-title" style="display: flex; align-items: center; gap: 0.25rem;">
+                <div
+                  class="project-card-title"
+                  style="display: flex; align-items: center; gap: 0.25rem"
+                >
                   <a href="https://www.msh.my" target="_blank">
-                    <h3>Malaysian Society of Hypertension</h3> 
-                    <sl-icon name="launch" library="material" style="font-size: 24px"></sl-icon>
+                    <h3>Malaysian Society of Hypertension</h3>
+                    <sl-icon
+                      name="launch"
+                      library="material"
+                      style="font-size: 24px"
+                    ></sl-icon>
                   </a>
                 </div>
-                <p>Implemented the front-end for the Malaysian Society of Hypertension portal with an admin panel for the purpose of tracking and managing MSH membership.</p>
-                <p class="tech-stack">Tech stack: <a href="https://nextjs.org" target="_blank">Next.js</a>, <a href="https://tailwindcss.com" target="_blank">TailwindCSS</a></p>
+                <p>
+                  Implemented the front-end for the Malaysian Society of
+                  Hypertension portal with an admin panel for the purpose of
+                  tracking and managing MSH membership.
+                </p>
+                <p class="tech-stack">
+                  Tech stack:
+                  <a href="https://nextjs.org" target="_blank">Next.js</a>,
+                  <a href="https://tailwindcss.com" target="_blank"
+                    >TailwindCSS</a
+                  >
+                </p>
               </div>
             </article>
           </div>
@@ -171,10 +320,12 @@
         </div>
         <div id="contact-links">
           <a href="mailto:contact@afeef.dev">Email</a>
-          <a href="https://linkedin.com/in/afeefabubakar" target="_blank">LinkedIn</a>
+          <a href="https://linkedin.com/in/afeefabubakar" target="_blank"
+            >LinkedIn</a
+          >
           <a href="https://github.com/afeefabubakar" target="_blank">GitHub</a>
         </div>
-      </section> 
+      </section>
       <footer>
         <p>&copy; 2024 - present, Afeef. All rights reserved</p>
       </footer>

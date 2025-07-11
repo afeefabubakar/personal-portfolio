@@ -1079,6 +1079,9 @@ header span {
 
 .personal-values-container {
   display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
   gap: 1.5em;
   margin-bottom: 1.6875em;
 }
@@ -1086,6 +1089,23 @@ header span {
   .personal-values-container {
     margin-top: 1.6875em;
   }
+}
+
+.personal-values-content {
+  position: relative;
+}
+
+.personal-values-mask-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.personal-values-mask {
+  height: 48px;
+  position: sticky;
+  top: 21em;
+  margin-bottom: 3.75em;
 }
 
 .i-value {
@@ -1101,15 +1121,12 @@ header span {
   font-size: 2.375em;
 }
 
-.i-value:before, .i-value:after {
+.i-value:after {
   content: " ";
   height: 100%;
   position: absolute;
   top: 0;
   width: 15px;
-}
-
-.i-value:after {
   box-shadow: 15px 0 15px -15px inset var(--sl-color-secondary-400);
   right: -15px;
 }
@@ -1123,10 +1140,17 @@ header span {
 .personal-values h3 {
   position: relative;
   color: var(--sl-color-primary-400);
+  transition: color 500ms cubic-bezier(0.33, 1, 0.68, 1);
+}
+.personal-values h3[data-intersecting=true] {
+  color: var(--sl-color-secondary-400);
 }
 
 .personal-value-container {
   width: 100%;
+}
+.personal-value-container p {
+  z-index: 1;
 }
 
 #projects {
